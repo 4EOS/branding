@@ -1,166 +1,159 @@
+---
+name: 4eos-brand-guidelines
+description: Applies 4EOS's official brand colors and typography to any artifact that may benefit from the company's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply — including client-facing documents, internal runbooks, proposals, incident reports, portal UIs, and presentations.
+license: 4EOS internal use only. Contact Systems Engineering for asset requests.
+---
+
 # 4EOS Brand Styling
 
 ## Overview
-Use this skill to apply 4EOS's official brand identity and style to any document, presentation, UI component, or visual deliverable.
 
-**Keywords:** 4EOS branding, corporate identity, visual identity, post-processing, styling, brand colors, typography, 4EOS brand, visual formatting, visual design, MSP branding, client-facing materials
+To access 4EOS's official brand identity and style resources, use this skill.
 
----
+**Keywords**: branding, corporate identity, visual identity, post-processing, styling, brand colors, typography, 4EOS brand, visual formatting, visual design, MSP, client-facing, proposals, runbooks, incident reports
 
 ## Brand Guidelines
 
 ### Colors
 
-**Core Palette:**
+**Core Brand Colors:**
 
-| Name | Hex | Role |
-|---|---|---|
-| Primary Navy | `#003D6C` | H1, headers, primary accent, Accent 1 |
-| Secondary Blue | `#006699` | H2, links, subheads, Accent 2 |
-| Accent Yellow | `#DAAA00` | Emphasis, UI highlights, CTAs, charts, Accent 3 |
-| Dark Base | `#1C2430` | Body text, dark backgrounds, Text/BG Dark 1 |
-| Mid Gray | `#4A6078` | Secondary text, captions, muted labels |
-| Light | `#E8EFF5` | Footer bars, light background panels |
-| White | `#FFFFFF` | Document/print context, card bodies |
+| Name            | Hex       | Role                                      |
+|-----------------|-----------|-------------------------------------------|
+| Primary Navy    | `#003D6C` | H1 headers, primary accent, navbar backgrounds |
+| Secondary Blue  | `#006699` | H2 subheadings, links, accent 2           |
+| Accent Yellow   | `#DAAA00` | Emphasis, UI highlights, CTA, charts, section labels |
+| Dark Base       | `#1C2430` | Body text, page/dark backgrounds          |
 
-**On-Dark Heading Colors (screen/UI context):**
+**Extended Palette:**
 
-| Level | Hex | Notes |
-|---|---|---|
-| H1 on dark | `#4A9CC4` | Lighter navy for dark background legibility |
-| H2 on dark | `#5BB8D4` | Mid blue |
-| H3 on dark | `#7EC8E3` | Light blue |
+| Name        | Hex       | Role                                         |
+|-------------|-----------|----------------------------------------------|
+| Mid Gray    | `#4A6078` | Supporting text, captions on white, table borders |
+| Light Blue  | `#E8EFF5` | Light backgrounds, alternating rows          |
+| White       | `#FFFFFF` | Card backgrounds, on-white document panels   |
 
-**On-White Heading Colors (document/print context):**
+**Interactive Blue Tints (on dark backgrounds):**
 
-| Level | Hex |
-|---|---|
-| H1 on white | `#003D6C` (Primary Navy) |
-| H2 on white | `#006699` (Secondary Blue) |
-| H3 on white | `#003D6C` (Primary Navy) |
-
----
+| Level    | Hex       | Usage              |
+|----------|-----------|--------------------|
+| H1 tint  | `#4A9CC4` | H1 on dark         |
+| H2 tint  | `#5BB8D4` | H2 on dark         |
+| H3 tint  | `#7EC8E3` | H3 on dark, code highlights |
 
 ### Typography
 
-**Heading Font:** Bahnschrift (fallback: Arial Narrow, then Arial)
-**Body Font:** Calibri / Calibri Body (fallback: Segoe UI, then sans-serif)
-**Alternative (when Bahnschrift unavailable):** Segoe UI Variable / Segoe UI for all levels
+**Primary Font Stack:**
 
-> Bahnschrift and Calibri are standard on Windows systems. For cross-platform environments, Segoe UI is the approved fallback.
+| Role              | Font                          | Fallback             |
+|-------------------|-------------------------------|----------------------|
+| Headings (H1–H3)  | Bahnschrift                   | Arial Narrow, sans-serif |
+| Body & UI         | Calibri / Calibri Body        | Segoe UI, sans-serif |
+| Alternative (all) | Segoe UI                      | Arial, sans-serif    |
 
----
+**Note**: Bahnschrift and Calibri are pre-installed on Windows systems. Segoe UI is the approved fallback in environments where Bahnschrift is unavailable.
 
 ### Type Scale
 
-| Role | Font | Size | Weight | Color (on white) |
-|---|---|---|---|---|
-| H1 | Bahnschrift | 26–28pt | Bold (700) | `#003D6C` |
-| H2 | Bahnschrift | 20–22pt | SemiBold (600) | `#006699` |
-| H3 | Bahnschrift | 14–16pt | SemiBold (600) | `#003D6C` |
-| Body | Calibri | 11–12pt | Regular (400) | `#1C2430` |
-| Emphasis | Calibri | 11–12pt | SemiBold (600) | `#1C2430` |
-| Caption / Label | Calibri | 10pt min | Regular (400) | `#4A6078` |
-| Eyebrow / Tag | Calibri | 9.5–10pt | SemiBold (600), uppercase, tracked | `#006699` |
+| Level    | Font              | Weight   | Size      | Color (dark bg) | Color (white bg) |
+|----------|-------------------|----------|-----------|-----------------|------------------|
+| H1       | Bahnschrift       | Bold     | 26–28pt   | `#4A9CC4`       | `#003D6C`        |
+| H2       | Bahnschrift       | SemiBold | 20–22pt   | `#5BB8D4`       | `#006699`        |
+| H3       | Bahnschrift       | SemiBold | 14–16pt   | `#7EC8E3`       | `#003D6C`        |
+| Body     | Calibri           | Regular  | 11–12pt   | `rgba(255,255,255,0.82)` | `#1C2430` |
+| Emphasis | Calibri           | SemiBold | 11–12pt   | `rgba(255,255,255,0.9)`  | `#1C2430` |
+| Caption  | Calibri           | Regular  | 10pt min  | `rgba(255,255,255,0.45)` | `#4A6078` |
+| Label    | Calibri           | Regular  | 10pt      | `#DAAA00` (uppercase, tracked) | `#4A6078` |
+
+### Logo
+
+- **Official logo URL**: `https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp`
+- Minimum display height: 38px (UI), 72px (headers/print)
+- Always display on navy (`#003D6C`) or white (`#FFFFFF`) backgrounds
+- Never place logo on yellow or mid-gray backgrounds
 
 ---
 
-### Word / PowerPoint Theme Mapping
+## Usage Context
 
-| Theme Slot | Value | Role |
-|---|---|---|
-| Heading Font | Bahnschrift | H1–H3 |
-| Body Font | Calibri / Calibri Body | Paragraphs, labels |
-| Text/BG Dark 1 | `#1C2430` | Primary text, dark backgrounds |
-| Accent 1 | `#003D6C` | H1, primary navy |
-| Accent 2 | `#006699` | H2, links, subheads |
-| Accent 3 | `#DAAA00` | Emphasis, charts, CTAs |
+### Dark Theme (Default)
+- Background: `#1C2430` (Dark Base)
+- Header/nav bar: `#003D6C` (Primary Navy)
+- Bottom accent border on header: 4px solid `#DAAA00`
+- Section labels: `#DAAA00`, uppercase, letter-spacing `0.2em`
+- Cards/panels: white or `rgba(255,255,255,0.05)` on dark
 
----
+### Light / Document / Print Theme
+- Background: `#FFFFFF`
+- H1: `#003D6C`, H2: `#006699`, H3: `#003D6C`
+- Body text: `#1C2430`
+- Captions: `#4A6078`
 
-## Features
-
-### Smart Font Application
-
-- Apply **Bahnschrift Bold** to H1 (26pt+)
-- Apply **Bahnschrift SemiBold** to H2 (20–22pt) and H3 (14–16pt)
-- Apply **Calibri Regular** to body text (11–12pt)
-- Apply **Calibri SemiBold** to emphasis/bold inline text
-- Apply **Calibri Regular** to captions (10pt, muted color)
-- Fall back to Segoe UI for all levels if Bahnschrift is unavailable
-- Fall back to Arial Narrow → Arial as a last resort for headings
-
-### Text Styling
-
-- H1 receives navy (`#003D6C` on white, `#4A9CC4` on dark)
-- H2 receives blue (`#006699` on white, `#5BB8D4` on dark)
-- H3 matches H1 color on white; `#7EC8E3` on dark
-- Body text: `#1C2430` on white; `rgba(255,255,255,0.82)` on dark
-- Captions: `#4A6078` on white; `rgba(255,255,255,0.45)` on dark
-- Active/selected nav items and section labels use Accent Yellow `#DAAA00`
-- Links use Secondary Blue `#006699`
-
-### Shape and Accent Colors
-
-- Non-text shapes, pills, stat highlights, and CTA elements use Accent Yellow `#DAAA00`
-- UI borders, dividers, and rule lines use navy (`#003D6C`) or yellow at low opacity
-- Footer/stat bars use Light background `#E8EFF5` with border `#D0DCE6`
-- Highlight pills: Yellow background `#DAAA00` with navy text `#003D6C`, Bahnschrift Bold, uppercase
-
-### Logo Usage
-
-- Official logo asset: `https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp`
-- Logo appears on navy `#003D6C` header backgrounds
-- Minimum height: 38px in UI contexts; 72px in brand guide / header contexts
-- Never place the logo on Accent Yellow or light gray without approval
+### UI Components
+- **Navigation bar**: `#003D6C` background, white links, active link underlined in `#DAAA00`
+- **Footer/stat bar**: `#003D6C` background, primary stats in white, secondary in `#006699`, alert values in `#DAAA00`
+- **Pills / badges**: `#DAAA00` background, `#003D6C` text, uppercase, bold, tight letter-spacing
+- **Code snippets**: `rgba(0,102,153,0.25)` background, `#7EC8E3` text
 
 ---
 
-## Technical Details
+## Word / PowerPoint Theme Mapping
 
-### Font Management
-
-- Bahnschrift is bundled with Windows 10/11 — no installation required in Windows environments
-- Calibri / Calibri Body is bundled with Microsoft Office and Windows
-- For non-Windows environments (Linux, macOS), substitute Segoe UI Variable or fall back to Arial/sans-serif
-- When generating PPTX via python-pptx, set theme heading font to `"Bahnschrift"` and body font to `"Calibri Body"`
-
-### Color Application (python-pptx)
-
-```python
-from pptx.util import Pt
-from pptx.dml.color import RGBColor
-
-# Core palette
-NAVY    = RGBColor(0x00, 0x3D, 0x6C)  # Primary Navy
-BLUE    = RGBColor(0x00, 0x66, 0x99)  # Secondary Blue
-YELLOW  = RGBColor(0xDA, 0xAA, 0x00)  # Accent Yellow
-DARK    = RGBColor(0x1C, 0x24, 0x30)  # Dark Base
-MID     = RGBColor(0x4A, 0x60, 0x78)  # Mid Gray
-LIGHT   = RGBColor(0xE8, 0xEF, 0xF5)  # Light Panel
-WHITE   = RGBColor(0xFF, 0xFF, 0xFF)  # White
-```
-
-### Color Application (CSS)
-
-```css
-:root {
-  --navy:   #003D6C;
-  --blue:   #006699;
-  --yellow: #DAAA00;
-  --dark:   #1C2430;
-  --mid:    #4A6078;
-  --light:  #E8EFF5;
-  --white:  #FFFFFF;
-}
-```
+| Theme Slot     | Value                | Role                            |
+|----------------|----------------------|---------------------------------|
+| Heading Font   | Bahnschrift          | H1–H3                           |
+| Body Font      | Calibri / Calibri Body | Paragraphs, labels            |
+| Text/BG Dark 1 | `#1C2430`            | Primary text, dark background   |
+| Accent 1       | `#003D6C`            | H1, primary navy                |
+| Accent 2       | `#006699`            | H2, links, subheadings          |
+| Accent 3       | `#DAAA00`            | Emphasis, charts, CTA           |
 
 ---
 
-## Usage Notes
+## Application Rules
 
-- All client-facing deliverables (proposals, runbooks, incident reports, SOW documents) should use the on-white palette with Bahnschrift headings and Calibri body
-- Internal dark-theme UI and portal mockups use the on-dark palette with lightened heading colors
-- Do not substitute brand colors without approval from Systems Engineering
-- For logo files or template requests, contact 4EOS Systems Engineering
-- Brand Guide version: **v1.0** — Revised March 2026
+### When creating HTML/React artifacts
+1. Import or define CSS variables at `:root` level:
+   ```css
+   :root {
+     --navy:   #003D6C;
+     --blue:   #006699;
+     --yellow: #DAAA00;
+     --dark:   #1C2430;
+     --mid:    #4A6078;
+     --light:  #E8EFF5;
+     --white:  #FFFFFF;
+   }
+   ```
+2. Use `font-family: 'Bahnschrift', 'Arial Narrow', sans-serif` for all headings
+3. Use `font-family: 'Calibri', 'Calibri Body', sans-serif` for all body text
+4. Dark-themed pages: `background: var(--dark)`, `color: var(--white)`
+5. Section labels: `color: var(--yellow)`, uppercase, `letter-spacing: 0.2em`
+
+### When creating PPTX/DOCX files
+1. Apply Bahnschrift to all title and heading placeholders
+2. Apply Calibri to all body/content placeholders
+3. Title slide background: `#003D6C` (navy) with bottom border in `#DAAA00`
+4. Content slides: white background, navy/blue headings
+5. Accent shapes and callout boxes: `#DAAA00` fill or stroke
+6. Footer text: `#4A6078` (mid gray), Calibri, 10pt
+
+### Do's and Don'ts
+- ✅ Use navy, blue, yellow, and dark base as the core four colors
+- ✅ Use Bahnschrift for headings; Calibri for body
+- ✅ Use yellow `#DAAA00` for emphasis, CTAs, highlights, and section labels
+- ✅ Use Segoe UI as fallback when Bahnschrift is unavailable
+- ❌ Do not use arbitrary accent colors outside the defined palette
+- ❌ Do not place yellow text on white backgrounds (contrast failure)
+- ❌ Do not use serif fonts — 4EOS identity is entirely sans-serif
+- ❌ Do not stretch or recolor the logo
+
+---
+
+## Asset References
+
+| Asset             | URL / Value                                                                                     |
+|-------------------|-------------------------------------------------------------------------------------------------|
+| 4EOS Logo (webp)  | `https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp` |
+| Brand Guide Doc   | 4EOS Brand Guide v1.0 · Revised March 2026                                                      |
+| Contact           | Systems Engineering team for logo files and template requests                                   |
