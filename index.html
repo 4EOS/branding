@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4EOS Brand Guide</title>
+<style>
+  :root {
+    --navy:   #003D6C;
+    --blue:   #006699;
+    --yellow: #DAAA00;
+    --dark:   #1C2430;
+    --mid:    #4A6078;
+    --light:  #E8EFF5;
+    --white:  #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'Calibri', 'Calibri Body', sans-serif;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    padding: 52px 64px 44px;
+    border-bottom: 4px solid var(--yellow);
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 260px; height: 260px;
+    border: 40px solid rgba(218,170,0,0.07);
+    border-radius: 50%;
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40%;
+    width: 160px; height: 160px;
+    border: 28px solid rgba(0,102,153,0.12);
+    border-radius: 50%;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .logo-badge {
+    display: inline-block;
+    height: 72px;
+    width: auto;
+  }
+  .header-divider {
+    width: 1px;
+    height: 56px;
+    background: rgba(255,255,255,0.2);
+  }
+  .header-label {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .header-title {
+    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 26pt;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .header-title span { color: var(--yellow); }
+  .header-sub {
+    font-family: 'Calibri', sans-serif;
+    font-size: 12pt;
+    color: rgba(255,255,255,0.5);
+    margin-top: 10px;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px 64px;
+  }
+
+  /* ── SECTION TITLES ── */
+  .section { margin-top: 52px; }
+  .section-label {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(218,170,0,0.2);
+  }
+
+  /* ── TYPE SPECIMENS ── */
+  .specimen-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0 32px;
+    align-items: start;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .specimen-row:last-child { border-bottom: none; }
+  .spec-meta { padding-top: 4px; }
+  .spec-tag {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    color: var(--blue);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .spec-detail {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+  .spec-detail code {
+    background: rgba(0,102,153,0.25);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 9pt;
+    color: #7EC8E3;
+  }
+
+  .t-h1 {
+    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+    font-weight: 700;
+    font-size: 26pt;
+    color: #4A9CC4;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .t-h2 {
+    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    color: #5BB8D4;
+    line-height: 1.2;
+  }
+  .t-h3 {
+    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+    font-weight: 600;
+    font-size: 15pt;
+    color: #7EC8E3;
+    line-height: 1.3;
+  }
+  .t-body {
+    font-family: 'Calibri', 'Calibri Body', sans-serif;
+    font-size: 12pt;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.65;
+  }
+  .t-emphasis {
+    font-family: 'Calibri', 'Calibri Body', sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.65;
+  }
+  .t-caption {
+    font-family: 'Calibri', 'Calibri Body', sans-serif;
+    font-size: 10pt;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* On-white */
+  .white-panel {
+    background: var(--white);
+    border-radius: 2px;
+    padding: 32px 36px;
+  }
+  .white-panel .t-h1 { color: var(--navy); }
+  .white-panel .t-h2 { color: var(--blue); }
+  .white-panel .t-h3 { color: var(--navy); }
+  .white-panel .t-body { color: var(--dark); }
+  .white-panel .t-emphasis { color: var(--dark); }
+  .white-panel .t-caption { color: var(--mid); }
+
+  /* ── COLOR SWATCHES ── */
+  .swatch-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .swatch { flex: 1; min-width: 140px; border-radius: 2px; overflow: hidden; }
+  .swatch-color { height: 72px; }
+  .swatch-info {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-top: none;
+  }
+  .swatch-name {
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+  }
+  .swatch-hex {
+    font-family: 'Calibri', monospace;
+    font-size: 10pt;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+    display: block;
+  }
+  .swatch-role {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    color: var(--yellow);
+    margin-top: 3px;
+    display: block;
+  }
+
+  /* ── MOCKUP ── */
+  .mockup-card {
+    background: var(--white);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .card-header-bar {
+    background: var(--navy);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-nav { display: flex; gap: 20px; }
+  .card-nav a {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10.5pt;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+  }
+  .card-nav a.active { color: var(--yellow); font-weight: 600; }
+  .card-body { padding: 32px 32px 28px; }
+  .card-eyebrow {
+    font-family: 'Calibri', sans-serif;
+    font-size: 9.5pt;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .card-h1 {
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 700;
+    font-size: 22pt;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .card-body-text {
+    font-family: 'Calibri', 'Calibri Body', sans-serif;
+    font-size: 11pt;
+    color: var(--dark);
+    line-height: 1.65;
+    max-width: 520px;
+    margin-bottom: 20px;
+  }
+  .card-body-text strong { color: var(--navy); font-weight: 600; }
+  .card-body-text a { color: var(--blue); text-decoration: none; }
+  .highlight-pill {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--navy);
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 700;
+    font-size: 9.5pt;
+    letter-spacing: 0.07em;
+    padding: 3px 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .card-footer-bar {
+    background: var(--light);
+    border-top: 1px solid #D0DCE6;
+    padding: 12px 32px;
+    display: flex;
+    gap: 32px;
+  }
+  .stat-val {
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 700;
+    font-size: 15pt;
+    color: var(--navy);
+  }
+  .stat-val span { color: var(--yellow); }
+  .stat-lbl {
+    font-family: 'Calibri', sans-serif;
+    font-size: 9pt;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* ── SEGOE ALT ── */
+  .segoe-demo {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 2px;
+    padding: 28px 32px;
+    margin-top: 16px;
+  }
+  .segoe-h {
+    font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 20pt;
+    color: #5BB8D4;
+    margin-bottom: 10px;
+  }
+  .segoe-body {
+    font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.65;
+    max-width: 560px;
+  }
+  .compare-label {
+    font-family: 'Calibri', sans-serif;
+    font-size: 10pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 12px;
+  }
+
+  /* ── THEME TABLE ── */
+  .theme-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-family: 'Calibri', sans-serif;
+    font-size: 11pt;
+  }
+  .theme-table th {
+    font-family: 'Bahnschrift', sans-serif;
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 12px;
+    text-align: left;
+  }
+  .theme-table td {
+    padding: 11px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.78);
+    vertical-align: middle;
+  }
+  .theme-table tr:last-child td { border-bottom: none; }
+  .theme-table .dot {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  .theme-table .role-cell {
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 10pt;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-row">
+    <img class="logo-badge" src="https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp" alt="4EOS">
+    <div class="header-divider"></div>
+    <div>
+      <span class="header-label">Brand Identity Guide</span>
+      <div class="header-title">Typography &amp; Color<span> System</span></div>
+    </div>
+  </div>
+  <div class="header-sub">Official 4EOS brand standards — fonts, colors, and usage guidelines for all client-facing and internal materials.</div>
+</header>
+
+<div class="container">
+
+  <!-- COLOR PALETTE -->
+  <div class="section">
+    <div class="section-label">Core Brand Colors</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#003D6C;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Primary Navy</span>
+          <span class="swatch-hex">#003D6C</span>
+          <span class="swatch-role">H1 · Headers · Accent 1</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#006699;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Secondary Blue</span>
+          <span class="swatch-hex">#006699</span>
+          <span class="swatch-role">H2 · Links · Accent 2</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#DAAA00;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Accent Yellow</span>
+          <span class="swatch-hex">#DAAA00</span>
+          <span class="swatch-role">Emphasis · UI Highlights</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1C2430;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Dark Base</span>
+          <span class="swatch-hex">#1C2430</span>
+          <span class="swatch-role">Body Text · Background</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE SCALE -->
+  <div class="section">
+    <div class="section-label">Type Scale · Bahnschrift + Calibri</div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">H1</span>
+        <span class="spec-detail">Bahnschrift Bold<br>26–28pt · <code>#003D6C</code></span>
+      </div>
+      <div class="t-h1">4EOS Brand &amp; Identity Standards</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">H2</span>
+        <span class="spec-detail">Bahnschrift SemiBold<br>20–22pt · <code>#006699</code></span>
+      </div>
+      <div class="t-h2">Managed Services · Branding Guidelines</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">H3</span>
+        <span class="spec-detail">Bahnschrift SemiBold<br>14–16pt · <code>#003D6C</code></span>
+      </div>
+      <div class="t-h3">Color Usage · Typography · Document Templates</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">Body</span>
+        <span class="spec-detail">Calibri Regular<br>11–12pt · <code>#1C2430</code></span>
+      </div>
+      <div class="t-body">4EOS brand materials should consistently use approved colors, fonts, and logo assets across all client-facing deliverables. This includes proposals, incident reports, runbooks, and internal documentation. Consistency reinforces professionalism and trust with clients.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">Emphasis</span>
+        <span class="spec-detail">Calibri SemiBold<br>11–12pt</span>
+      </div>
+      <div class="t-emphasis">All external communications must use approved 4EOS logo assets and adhere to the defined color palette without substitution.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="spec-meta">
+        <span class="spec-tag">Caption</span>
+        <span class="spec-detail">Calibri Regular<br>10pt min</span>
+      </div>
+      <div class="t-caption">4EOS Brand Guide v1.0 · Revised March 2026 · For internal and client-facing use · Contact Systems Engineering for asset requests</div>
+    </div>
+  </div>
+
+  <!-- ON-WHITE -->
+  <div class="section">
+    <div class="section-label">On White · Document &amp; Print Context</div>
+    <div class="white-panel">
+      <div class="t-h1" style="color:#003D6C; font-size:24pt;">4EOS Brand &amp; Identity Standards</div>
+      <div class="t-h2" style="margin-top:10px;">Managed Services · Branding Guidelines</div>
+      <div class="t-h3" style="margin-top:8px;">Color Usage · Typography · Document Templates</div>
+      <div class="t-body" style="color:#1C2430; margin-top:14px;">4EOS brand materials should consistently use <span style="font-weight:600;">approved colors, fonts, and logo assets</span> across all client-facing deliverables — including proposals, incident reports, runbooks, and internal documentation. Reach out to <a href="#" style="color:#006699;">Systems Engineering</a> for logo files or template requests.</div>
+      <div class="t-caption" style="color:#4A6078; margin-top:12px;">4EOS Brand Guide v1.0 · Revised March 2026 · For internal and client-facing use</div>
+    </div>
+  </div>
+
+  <!-- LIVE MOCKUP -->
+  <div class="section">
+    <div class="section-label">Live UI Mockup · Portal Header Example</div>
+    <div class="mockup-card">
+      <div class="card-header-bar">
+        <img src="https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp" alt="4EOS" style="height:38px; width:auto;">
+        <nav class="card-nav">
+          <a href="#">Dashboard</a>
+          <a href="#" class="active">Clients</a>
+          <a href="#">Reports</a>
+          <a href="#">Alerts</a>
+        </nav>
+      </div>
+      <div class="card-body">
+        <div class="card-eyebrow">Client Infrastructure Overview</div>
+        <div class="card-h1">4EOS Client Portal</div>
+        <div class="card-body-text">
+          This portal provides a centralized view of your <strong>managed infrastructure</strong>, open tickets, and active alerts. All branding elements — colors, logo, and typefaces — reflect the <a href="#">4EOS identity standards</a> documented in this guide.
+        </div>
+        <span class="highlight-pill">ACTIVE</span>
+        <span class="highlight-pill">MONITORED</span>
+        <span class="highlight-pill">COMPLIANT</span>
+      </div>
+      <div class="card-footer-bar">
+        <div class="stat-item">
+          <div class="stat-val">99<span>.4%</span></div>
+          <div class="stat-lbl">Uptime 30d</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val" style="color:#006699;">14</div>
+          <div class="stat-lbl">Open Tickets</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val" style="color:#DAAA00;">2</div>
+          <div class="stat-lbl">Critical Alerts</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">47<span>ms</span></div>
+          <div class="stat-lbl">Avg Latency</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEGOE ALT -->
+  <div class="section">
+    <div class="section-label">Alternative · All Segoe UI</div>
+    <div class="segoe-demo">
+      <div class="compare-label">Segoe UI SemiBold H2 · Segoe UI Regular Body</div>
+      <div class="segoe-h">Managed Services · Branding Guidelines</div>
+      <div class="segoe-body">Segoe UI is an approved alternative for environments where Bahnschrift is unavailable. It presents a softer, more neutral tone while remaining consistent with Microsoft platform conventions and the 4EOS color palette.</div>
+    </div>
+  </div>
+
+  <!-- THEME TABLE -->
+  <div class="section">
+    <div class="section-label">Word / PowerPoint Theme Mapping</div>
+    <table class="theme-table">
+      <thead>
+        <tr>
+          <th>Theme Slot</th>
+          <th>Value</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Heading Font</td>
+          <td>Bahnschrift</td>
+          <td class="role-cell">H1 – H3</td>
+        </tr>
+        <tr>
+          <td>Body Font</td>
+          <td>Calibri / Calibri Body</td>
+          <td class="role-cell">Paragraphs · Labels</td>
+        </tr>
+        <tr>
+          <td>Text/BG Dark 1</td>
+          <td><span class="dot" style="background:#1C2430;"></span>#1C2430</td>
+          <td class="role-cell">Primary text · dark background</td>
+        </tr>
+        <tr>
+          <td>Accent 1</td>
+          <td><span class="dot" style="background:#003D6C;"></span>#003D6C</td>
+          <td class="role-cell">H1 · Primary navy</td>
+        </tr>
+        <tr>
+          <td>Accent 2</td>
+          <td><span class="dot" style="background:#006699;"></span>#006699</td>
+          <td class="role-cell">H2 · Links · Subheads</td>
+        </tr>
+        <tr>
+          <td>Accent 3</td>
+          <td><span class="dot" style="background:#DAAA00; border:1px solid rgba(255,255,255,0.1);"></span>#DAAA00</td>
+          <td class="role-cell">Emphasis · Charts · CTA</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>
