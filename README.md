@@ -4,6 +4,11 @@ description: Applies 4EOS's official brand colors and typography to any artifact
 license: 4EOS internal use only. Contact Systems Engineering for asset requests.
 ---
 
+```
+curl -L https://raw.githubusercontent.com/4EOS/branding/main/4eos-branding.skill -o 4eos-branding.skill
+claude mcp add-skill ./4eos-branding.skill
+```
+
 # 4EOS Brand Styling
 
 ## Overview
