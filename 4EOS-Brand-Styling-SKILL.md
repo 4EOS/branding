@@ -1,6 +1,6 @@
 ---
 name: 4eos-brand-guidelines
-description: Applies 4EOS's official brand colors and typography to any artifact that may benefit from the company's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply — including client-facing documents, internal runbooks, proposals, incident reports, portal UIs, and presentations.
+description: Applies 4EOS's official brand colors and typography to any artifact that should carry the company look. Use it when brand colors, style guidelines, visual formatting, or company design standards apply: client-facing documents, internal runbooks, proposals, incident reports, portal UIs, and presentations.
 license: 4EOS internal use only. Contact Systems Engineering for asset requests.
 ---
 
@@ -8,7 +8,7 @@ license: 4EOS internal use only. Contact Systems Engineering for asset requests.
 
 ## Overview
 
-To access 4EOS's official brand identity and style resources, use this skill.
+This skill carries 4EOS's official brand identity: colors, typography, logo rules, and application guidance for documents, slides, and portal UI.
 
 **Keywords**: branding, corporate identity, visual identity, post-processing, styling, brand colors, typography, 4EOS brand, visual formatting, visual design, MSP, client-facing, proposals, runbooks, incident reports
 
@@ -47,21 +47,30 @@ To access 4EOS's official brand identity and style resources, use this skill.
 
 | Role              | Font                          | Fallback             |
 |-------------------|-------------------------------|----------------------|
-| Headings (H1–H3)  | Bahnschrift                   | Arial Narrow, sans-serif |
+| Headings (H1-H3)  | Bahnschrift                   | Arial Narrow, sans-serif |
 | Body & UI         | Calibri / Calibri Body        | Segoe UI, sans-serif |
 | Alternative (all) | Segoe UI                      | Arial, sans-serif    |
 
 **Note**: Bahnschrift and Calibri are pre-installed on Windows systems. Segoe UI is the approved fallback in environments where Bahnschrift is unavailable.
 
+**Web fallback**: on pages viewed outside Windows/Office, load Barlow Semi Condensed (headings) and Carlito (body) from Google Fonts and place them after the brand fonts in the stack. Both are metric-compatible stand-ins, so layout matches documents produced in Office:
+
+```css
+--font-display: 'Bahnschrift', 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+--font-body: 'Calibri', 'Calibri Body', 'Carlito', 'Segoe UI', sans-serif;
+```
+
+**Templates**: ready-made starters (Word `.dotx`, PowerPoint `.potx`, print letterhead HTML, web page HTML) live in `templates/` in this repo.
+
 ### Type Scale
 
 | Level    | Font              | Weight   | Size      | Color (dark bg) | Color (white bg) |
 |----------|-------------------|----------|-----------|-----------------|------------------|
-| H1       | Bahnschrift       | Bold     | 26–28pt   | `#4A9CC4`       | `#003D6C`        |
-| H2       | Bahnschrift       | SemiBold | 20–22pt   | `#5BB8D4`       | `#006699`        |
-| H3       | Bahnschrift       | SemiBold | 14–16pt   | `#7EC8E3`       | `#003D6C`        |
-| Body     | Calibri           | Regular  | 11–12pt   | `rgba(255,255,255,0.82)` | `#1C2430` |
-| Emphasis | Calibri           | SemiBold | 11–12pt   | `rgba(255,255,255,0.9)`  | `#1C2430` |
+| H1       | Bahnschrift       | Bold     | 26-28pt   | `#4A9CC4`       | `#003D6C`        |
+| H2       | Bahnschrift       | SemiBold | 20-22pt   | `#5BB8D4`       | `#006699`        |
+| H3       | Bahnschrift       | SemiBold | 14-16pt   | `#7EC8E3`       | `#003D6C`        |
+| Body     | Calibri           | Regular  | 11-12pt   | `rgba(255,255,255,0.82)` | `#1C2430` |
+| Emphasis | Calibri           | SemiBold | 11-12pt   | `rgba(255,255,255,0.9)`  | `#1C2430` |
 | Caption  | Calibri           | Regular  | 10pt min  | `rgba(255,255,255,0.45)` | `#4A6078` |
 | Label    | Calibri           | Regular  | 10pt      | `#DAAA00` (uppercase, tracked) | `#4A6078` |
 
@@ -91,7 +100,7 @@ To access 4EOS's official brand identity and style resources, use this skill.
 
 ### UI Components
 - **Navigation bar**: `#003D6C` background, white links, active link underlined in `#DAAA00`
-- **Footer/stat bar**: `#003D6C` background, primary stats in white, secondary in `#006699`, alert values in `#DAAA00`
+- **Footer/stat bar**: `#003D6C` background, primary stats in white, secondary in `#7EC8E3`, alert values in `#DAAA00` (`#006699` on navy fails contrast at roughly 1.3:1; keep it for light backgrounds)
 - **Pills / badges**: `#DAAA00` background, `#003D6C` text, uppercase, bold, tight letter-spacing
 - **Code snippets**: `rgba(0,102,153,0.25)` background, `#7EC8E3` text
 
@@ -101,7 +110,7 @@ To access 4EOS's official brand identity and style resources, use this skill.
 
 | Theme Slot     | Value                | Role                            |
 |----------------|----------------------|---------------------------------|
-| Heading Font   | Bahnschrift          | H1–H3                           |
+| Heading Font   | Bahnschrift          | H1-H3                           |
 | Body Font      | Calibri / Calibri Body | Paragraphs, labels            |
 | Text/BG Dark 1 | `#1C2430`            | Primary text, dark background   |
 | Accent 1       | `#003D6C`            | H1, primary navy                |
@@ -139,14 +148,18 @@ To access 4EOS's official brand identity and style resources, use this skill.
 6. Footer text: `#4A6078` (mid gray), Calibri, 10pt
 
 ### Do's and Don'ts
-- ✅ Use navy, blue, yellow, and dark base as the core four colors
-- ✅ Use Bahnschrift for headings; Calibri for body
-- ✅ Use yellow `#DAAA00` for emphasis, CTAs, highlights, and section labels
-- ✅ Use Segoe UI as fallback when Bahnschrift is unavailable
-- ❌ Do not use arbitrary accent colors outside the defined palette
-- ❌ Do not place yellow text on white backgrounds (contrast failure)
-- ❌ Do not use serif fonts — 4EOS identity is entirely sans-serif
-- ❌ Do not stretch or recolor the logo
+
+**Do:**
+- Use navy, blue, yellow, and dark base as the core four colors
+- Use Bahnschrift for headings; Calibri for body
+- Use yellow `#DAAA00` for emphasis, CTAs, highlights, and section labels
+- Use Segoe UI as fallback when Bahnschrift is unavailable
+
+**Don't:**
+- Use accent colors outside the defined palette
+- Place yellow text on white backgrounds (contrast failure)
+- Use serif fonts; the 4EOS identity is entirely sans-serif
+- Stretch or recolor the logo
 
 ---
 

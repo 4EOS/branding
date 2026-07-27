@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>4EOS - Page Title</title>
+<!-- 4EOS web page starter. Light/document theme per 4EOS-Brand-Styling-SKILL.md.
+     Replace the placeholder copy; keep the tokens and component patterns intact.
+     For the dark portal theme, swap in the dark tokens from the brand guide. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Brand tokens (4EOS-Brand-Styling-SKILL.md; portable copy in tokens.css) */
+  --navy: #003D6C;
+  --blue: #006699;
+  --yellow: #DAAA00;
+  --dark: #1C2430;
+  --mid: #4A6078;
+  --light: #E8EFF5;
+  --white: #FFFFFF;
+  --h3-tint: #7EC8E3;
+
+  --font-display: 'Bahnschrift', 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Calibri', 'Calibri Body', 'Carlito', 'Segoe UI', sans-serif;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: clip; }
+body {
+  background: var(--white);
+  color: var(--dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Navigation bar: navy, white links, yellow 4px bottom accent, active link underlined in yellow */
+.site-nav {
+  background: var(--navy);
+  border-bottom: 4px solid var(--yellow);
+}
+.site-nav-inner {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+.site-nav img { height: 38px; width: auto; display: block; }
+.site-nav ul { display: flex; gap: var(--space-lg); flex-wrap: wrap; list-style: none; }
+.site-nav a {
+  color: var(--light);
+  text-decoration: none;
+  padding-block: var(--space-sm);
+  border-bottom: 2px solid transparent;
+}
+.site-nav a[aria-current="page"] { color: var(--white); border-bottom-color: var(--yellow); }
+@media (hover: hover) {
+  .site-nav a:hover { color: var(--white); }
+}
+.site-nav a:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+/* Page frame */
+main {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--space-2xl) var(--space-lg);
+}
+section + section { margin-top: var(--space-2xl); }
+
+/* Type scale (white-background column of the brand spec) */
+h1 { font-family: var(--font-display); font-weight: 700; font-size: 2rem; line-height: 1.15; color: var(--navy); margin-bottom: var(--space-md); }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; line-height: 1.2; color: var(--blue); margin-bottom: var(--space-sm); }
+h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; line-height: 1.3; color: var(--navy); margin-bottom: var(--space-sm); }
+p { max-width: 65ch; margin-bottom: var(--space-md); }
+.caption { font-size: 0.875rem; color: var(--mid); max-width: 65ch; }
+
+/* Pill / badge: yellow, navy text, uppercase, tight tracking */
+.pill {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* Footer */
+.site-foot {
+  border-top: 1px solid var(--light);
+  padding: var(--space-lg);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--mid);
+}
+
+@media (max-width: 40rem) {
+  .site-nav-inner { flex-direction: column; align-items: flex-start; }
+  main { padding: var(--space-xl) var(--space-md); }
+  .site-nav-inner, .site-foot { padding-inline: var(--space-md); }
+}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <img src="https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp" alt="4EOS - Computers / Networks / Security">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#" aria-current="page">Current page</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1>Page heading</h1>
+    <p>Lead paragraph. Replace this and every placeholder below with real content before publishing.</p>
+    <p class="caption">Caption or supporting note. Calibri, mid gray.</p>
+  </section>
+
+  <section>
+    <h2>Section heading</h2>
+    <p>Body text in Calibri, Dark Base on white.</p>
+    <p><span class="pill">Status</span></p>
+  </section>
+
+  <section>
+    <h3>Subsection heading</h3>
+    <p>Body text under a third-level heading.</p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  4EOS &middot; Computers / Networks / Security
+</footer>
+
+</body>
+</html>

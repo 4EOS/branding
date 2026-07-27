@@ -1,0 +1,65 @@
+/* 4EOS brand tokens, v1.0 (March 2026).
+ * Values come from 4EOS-Brand-Styling-SKILL.md, the source of truth.
+ * index.html carries an inline copy of these same tokens so the page stays self-contained.
+ */
+
+:root {
+  /* Core brand colors */
+  --color-navy:    #003D6C;  /* H1 headings, primary accent, nav backgrounds */
+  --color-blue:    #006699;  /* H2 subheadings, links, second accent */
+  --color-yellow:  #DAAA00;  /* emphasis, CTAs, highlights, section labels */
+  --color-dark:    #1C2430;  /* body text on white, dark page backgrounds */
+
+  /* Extended palette */
+  --color-mid:     #4A6078;  /* captions on white, table borders */
+  --color-light:   #E8EFF5;  /* light panels, alternating table rows */
+  --color-white:   #FFFFFF;  /* document and card backgrounds */
+
+  /* Tints for dark backgrounds */
+  --color-h1-tint: #4A9CC4;  /* H1 on dark */
+  --color-h2-tint: #5BB8D4;  /* H2 on dark */
+  --color-h3-tint: #7EC8E3;  /* H3 on dark, code highlights */
+
+  /* System aliases (derived, not brand) */
+  --color-paper:   var(--color-white);
+  --color-paper-2: var(--color-light);
+  --color-ink:     var(--color-dark);
+  --color-muted:   var(--color-mid);
+  --color-rule:    #C9D6E2;
+  --color-focus:   var(--color-blue);
+  --color-focus-dark: var(--color-h3-tint);
+
+  /* Typography */
+  --font-display: 'Bahnschrift', 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  --font-body:    'Calibri', 'Calibri Body', 'Carlito', 'Segoe UI', sans-serif;
+  --font-mono:    'Calibri', 'Carlito', monospace;
+
+  /* Spacing: 4pt scale */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Type scale */
+  --text-xs:   0.75rem;
+  --text-sm:   0.8125rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5rem;
+  --text-xl:   2rem;
+  --text-2xl:  clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:  cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+
+  --radius: 2px;
+}
