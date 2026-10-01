@@ -1,5 +1,5 @@
 ---
-name: 4eos-brand-guidelines
+name: branding-4eos
 description: Applies 4EOS's official brand colors and typography to any artifact that should carry the company look. Use it when brand colors, style guidelines, visual formatting, or company design standards apply: client-facing documents, internal runbooks, proposals, incident reports, portal UIs, and presentations.
 license: 4EOS internal use only. Contact Systems Engineering for asset requests.
 ---

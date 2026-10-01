@@ -41,7 +41,13 @@ Raw URL pattern: `https://raw.githubusercontent.com/4EOS/branding/main/assets/<f
 
 ## Install the skill
 
+**Hermes Agent:**
+```bash
+hermes skills install https://raw.githubusercontent.com/4EOS/branding/main/4EOS-Brand-Styling-SKILL.md
 ```
+
+**Claude Code / MCP:**
+```bash
 curl -L https://raw.githubusercontent.com/4EOS/branding/main/4eos-branding.skill -o 4eos-branding.skill
 claude mcp add-skill ./4eos-branding.skill
 ```
