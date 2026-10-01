@@ -26,7 +26,7 @@ from pptx.dml.color import RGBColor as PRGBColor
 from pptx.enum.text import PP_ALIGN
 
 HERE = Path(__file__).resolve().parent
-LOGO_PNG = Path("/tmp/4eos_logo.png")
+LOGO_PNG = HERE.parent / "assets" / "4eos_original_logo.png"
 
 # Brand tokens (4EOS-Brand-Styling-SKILL.md)
 NAVY = "003D6C"

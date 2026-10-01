@@ -76,7 +76,11 @@ This skill carries 4EOS's official brand identity: colors, typography, logo rule
 
 ### Logo
 
-- **Official logo URL**: `https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp`
+- **Official Logo Assets** (hosted in `4EOS/branding/assets`):
+  - **WebP (Web / Modern)**: `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_original_logo.webp`
+  - **PNG (Office / Documents / Print)**: `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_original_logo.png`
+  - **GitHub Pages Hosted**: `https://4eos.github.io/branding/assets/4eos_original_logo.webp`
+  - **Local / Repository Relative**: `./assets/4eos_original_logo.webp` (WebP) or `./assets/4eos_original_logo.png` (PNG)
 - Minimum display height: 38px (UI), 72px (headers/print)
 - Always display on navy (`#003D6C`) or white (`#FFFFFF`) backgrounds
 - Never place logo on yellow or mid-gray backgrounds
@@ -165,8 +169,12 @@ This skill carries 4EOS's official brand identity: colors, typography, logo rule
 
 ## Asset References
 
-| Asset             | URL / Value                                                                                     |
-|-------------------|-------------------------------------------------------------------------------------------------|
-| 4EOS Logo (webp)  | `https://raw.githubusercontent.com/4EOS/deployment-assets/refs/heads/main/4eos_original_logo.webp` |
-| Brand Guide Doc   | 4EOS Brand Guide v1.0 · Revised March 2026                                                      |
-| Contact           | Systems Engineering team for logo files and template requests                                   |
+| Asset                   | URL / Value                                                                           |
+|-------------------------|---------------------------------------------------------------------------------------|
+| 4EOS Logo (WebP)        | `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_original_logo.webp` |
+| 4EOS Logo (PNG)         | `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_original_logo.png`  |
+| 4EOS Logo (Mark Only)   | `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_logo_no_words.png`  |
+| 4EOS Logo (Square)      | `https://raw.githubusercontent.com/4EOS/branding/main/assets/4eos_logo_square.png`    |
+| 4EOS Brand Guide (Web)  | `https://4eos.github.io/branding/`                                                    |
+| Brand Guide Doc         | 4EOS Brand Guide v1.0 · Revised March 2026                                            |
+| Contact                 | Systems Engineering team for logo files and template requests                          |
